@@ -1,0 +1,14 @@
+#ROOT_SOURCE/namespaces/NAMESPACE/repo-sync.yaml
+apiVersion: configsync.gke.io/v1beta1
+kind: RepoSync
+metadata:
+  name: reposync-nginx
+  namespace: cs-nginx
+spec:
+  sourceType: git
+  sourceFormat: unstructured
+  git:
+    repo: https://github.com/Arpit-Sharma-at-Appointy/configsync-sample.git
+    branch: main
+    dir: /
+    auth: none
